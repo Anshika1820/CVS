@@ -7,7 +7,7 @@ const categories = [
   },
   {
     title: "Bug Bounty",
-    img: "/public/big bounty.png",
+    img: "/public/bigbounty.png",
   },
   {
     title: "Blue Team",
