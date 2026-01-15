@@ -5,11 +5,15 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
   }
   
   body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #191d31 0%, #764ba2 100%);
+    width: 100%;
+    overflow-x: hidden;
   }
 }
 
