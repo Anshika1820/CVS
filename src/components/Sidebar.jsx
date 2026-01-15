@@ -1,13 +1,13 @@
 const Sidebar = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-5 sm:space-y-6">
 
       {/* PLATFORM INTRO */}
-      <div className="border border-gray-800 rounded-xl p-4">
-        <h3 className="font-semibold mb-2">
+      <div className="border border-gray-800 rounded-xl p-3 sm:p-4 bg-[#0B0D1A]">
+        <h3 className="font-semibold mb-2 text-sm sm:text-base">
           About Codevirus Security
         </h3>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-gray-400 leading-relaxed">
           A community-driven cyber security knowledge platform.
           All articles are reviewed by industry professionals
           before publishing.
@@ -15,11 +15,11 @@ const Sidebar = () => {
       </div>
 
       {/* RULES */}
-      <div className="border border-gray-800 rounded-xl p-4">
-        <h3 className="font-semibold mb-3">
+      <div className="border border-gray-800 rounded-xl p-3 sm:p-4 bg-[#0B0D1A]">
+        <h3 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
           Publishing Rules
         </h3>
-        <ul className="text-sm text-gray-400 space-y-1">
+        <ul className="text-sm text-gray-400 space-y-1 leading-relaxed">
           <li>✔️ Cyber Security topics only</li>
           <li>✔️ Original & practical content</li>
           <li>❌ No AI spam</li>
@@ -28,8 +28,8 @@ const Sidebar = () => {
       </div>
 
       {/* TRENDING */}
-      <div className="border border-gray-800 rounded-xl p-4">
-        <h3 className="font-semibold mb-3">
+      <div className="border border-gray-800 rounded-xl p-3 sm:p-4 bg-[#0B0D1A]">
+        <h3 className="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
           Trending Topics
         </h3>
         <div className="flex flex-wrap gap-2">
