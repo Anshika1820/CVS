@@ -20,10 +20,11 @@ const Write = () => {
 
         <select className="w-full mb-4 p-2 bg-gray-900 border border-gray-700 rounded">
           <option>Select Category</option>
-          <option>Web Security</option>
+          <option>SOC</option>
           <option>Bug Bounty</option>
           <option>Blue Team</option>
-          <option>Cyber Law</option>
+          <option>Red Team</option>
+          <option>Any latest technology/option>                 
         </select>
 
         <textarea
