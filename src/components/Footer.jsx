@@ -10,125 +10,122 @@ const Footer = () => {
   const [openTerms, setOpenTerms] = useState(false);
   const [openPrivacy, setOpenPrivacy] = useState(false);
 
-  const footerLinks = {
-    useful: [
-      { name: 'Terms Conditions', href: '#', onClick: () => setOpenTerms(true) },
-      { name: 'Privacy Policy', href: '#', onClick: () => setOpenPrivacy(true) },
-    ],
-    services: [
-      { name: 'Data Protection & Privacy', href: '/services/12' },
-      { name: 'Cloud Security', href: '/services/11' },
-      { name: 'Vulnerability Assessment & Penetration Testing', href: '/services/12' },
-      { name: 'Aadhaar Security Audit', href: '/services/13' },
-      { name: 'System Security Audit', href: '/services/16' },
-      { name: 'Digital Forensics', href: '/services/17' },
-      { name: 'IT Security Audit', href: '/services/19' },
-      { name: 'IoT Security', href: '/services/18' },
-      { name: 'Networking Audit', href: '/services/21' },
-    ],
-  };
-
   return (
-    <footer className="bg-[#0d1117] text-gray-300">
-      <div className="container-custom py-12 px-4 md:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-[#0d1117] text-gray-300 relative">
+      
+      {/* Top gradient line */}
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-green-500 to-transparent" />
+
+      <div className="max-w-7xl mx-auto py-14 px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Company Info */}
-          <div className="flex flex-col items-start">
-            <p className="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
-              We help organizations strengthen their security posture through vulnerability assessments, penetration testing, and proactive risk management strategies.
+          <div>
+            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+              We help organizations strengthen their security posture through
+              vulnerability assessments, penetration testing, and proactive risk
+              management strategies.
             </p>
-            <div className="flex space-x-3">
-              <a href="https://x.com/codevirussec" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#161b22] rounded-full flex items-center justify-center hover:bg-green-500 transition duration-300">
-                <FaTwitter className="text-gray-300 hover:text-white" />
-              </a>
-              <a href="https://www.instagram.com/codevirussec" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#161b22] rounded-full flex items-center justify-center hover:bg-green-500 transition duration-300">
-                <FaInstagram className="text-gray-300 hover:text-white" />
-              </a>
-              <a href="https://www.linkedin.com/company/codevirussecurity/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#161b22] rounded-full flex items-center justify-center hover:bg-green-500 transition duration-300">
-                <FaLinkedin className="text-gray-300 hover:text-white" />
-              </a>
-              <a href="https://www.facebook.com/codevirussec9" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#161b22] rounded-full flex items-center justify-center hover:bg-green-500 transition duration-300">
-                <FaFacebookF className="text-gray-300 hover:text-white" />
-              </a>
+
+            <div className="flex space-x-4">
+              {[
+                { icon: <FaTwitter />, link: "https://x.com/codevirussec" },
+                { icon: <FaInstagram />, link: "https://www.instagram.com/codevirussec" },
+                { icon: <FaLinkedin />, link: "https://www.linkedin.com/company/codevirussecurity/" },
+                { icon: <FaFacebookF />, link: "https://www.facebook.com/codevirussec9" },
+              ].map((item, index) => (
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#161b22] rounded-full flex items-center justify-center 
+                             hover:bg-green-500 hover:scale-110 transition-all duration-300 shadow-md"
+                >
+                  <span className="text-gray-300 hover:text-white">
+                    {item.icon}
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Location */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 sm:mb-6 text-green-500">Location</h3>
-            <div className="space-y-3">
-              <a href="https://www.google.com/maps/search/?api=1&query=Lucknow,India" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-3 hover:bg-[#161b22] p-2 rounded-lg transition">
-                <HiLocationMarker className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-medium text-gray-300">Address:</p>
-                  <p className="text-gray-400 text-sm">Lucknow, India</p>
-                </div>
+            <h3 className="text-lg font-semibold mb-5 text-green-500">Location</h3>
+            <div className="space-y-4 text-sm">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Lucknow,India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start space-x-3 hover:text-green-500 transition"
+              >
+                <HiLocationMarker className="text-green-500 text-xl mt-1" />
+                <span>Lucknow, India</span>
               </a>
-              <a href="mailto:services@codevirussec.in" className="flex items-start space-x-3 hover:bg-[#161b22] p-2 rounded-lg transition">
-                <HiMail className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-medium text-gray-300">Email:</p>
-                  <p className="text-gray-400 text-sm">services@codevirussec.in</p>
-                </div>
+
+              <a
+                href="mailto:services@codevirussec.in"
+                className="flex items-start space-x-3 hover:text-green-500 transition"
+              >
+                <HiMail className="text-green-500 text-xl mt-1" />
+                <span>services@codevirussec.in</span>
               </a>
-              <a href="tel:+919918103909" className="flex items-start space-x-3 hover:bg-[#161b22] p-2 rounded-lg transition">
-                <HiPhone className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-medium text-gray-300">Phone:</p>
-                  <p className="text-gray-400 text-sm">+91 9918103909</p>
-                </div>
+
+              <a
+                href="tel:+919918103909"
+                className="flex items-start space-x-3 hover:text-green-500 transition"
+              >
+                <HiPhone className="text-green-500 text-xl mt-1" />
+                <span>+91 9918103909</span>
               </a>
             </div>
           </div>
 
           {/* Useful Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 sm:mb-6 text-green-500">Useful Links</h3>
-            <ul className="space-y-2 sm:space-y-3">
-              {footerLinks.useful.map((link) => (
-                <li key={link.name}>
-                  {link.onClick ? (
-                    <a
-                      href={link.href}
-                      onClick={(e) => { e.preventDefault(); link.onClick(); }}
-                      className="text-gray-400 hover:text-green-500 transition-colors duration-300 cursor-pointer text-sm sm:text-base"
-                    >
-                      {link.name}
-                    </a>
-                  ) : (
-                    <Link
-                      to={link.href}
-                      className="text-gray-400 hover:text-green-500 transition-colors duration-300 text-sm sm:text-base"
-                    >
-                      {link.name}
-                    </Link>
-                  )}
-                </li>
-              ))}
+            <h3 className="text-lg font-semibold mb-5 text-green-500">Useful Links</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => { e.preventDefault(); setOpenTerms(true); }}
+                  className="hover:text-green-500 transition"
+                >
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => { e.preventDefault(); setOpenPrivacy(true); }}
+                  className="hover:text-green-500 transition"
+                >
+                  Privacy Policy
+                </a>
+              </li>
             </ul>
           </div>
+        </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#161b22] mt-10 pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
-            <p>© {currentYear} CodevirusSecurity. All Rights Reserved.</p>
-            <div className="flex space-x-4 mt-2 sm:mt-0">
-              <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); setOpenTerms(true); }}
-                className="hover:text-green-500 transition duration-300 cursor-pointer"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); setOpenPrivacy(true); }}
-                className="hover:text-green-500 transition duration-300 cursor-pointer"
-              >
-                Privacy Policy
-              </a>
-            </div>
+        <div className="border-t border-[#161b22] mt-12 pt-6 flex flex-col sm:flex-row 
+                        justify-between items-center text-sm text-gray-400 gap-3">
+          <p>© {currentYear} CodevirusSecurity. All Rights Reserved.</p>
+
+          <div className="flex space-x-5">
+            <span
+              onClick={() => setOpenTerms(true)}
+              className="cursor-pointer hover:text-green-500 transition"
+            >
+              Terms
+            </span>
+            <span
+              onClick={() => setOpenPrivacy(true)}
+              className="cursor-pointer hover:text-green-500 transition"
+            >
+              Privacy
+            </span>
           </div>
         </div>
       </div>
