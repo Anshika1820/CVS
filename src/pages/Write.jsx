@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 
 const Write = () => {
   return (
+    <>
       <Navbar />
       <div className="max-w-3xl mx-auto p-6">
         <h2 className="text-2xl font-semibold mb-4 text-center">
@@ -36,6 +37,7 @@ const Write = () => {
           Submit for Review
         </button>
       </div>
+      </>
   );
 };
 
