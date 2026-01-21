@@ -7,12 +7,20 @@ const categories = [
   },
   {
     title: "Bug Bounty",
-    img: "/bigbounty.png",
+    img: "/public/bigbounty.png",
   },
   {
     title: "Blue Team",
     img: "https://images.unsplash.com/photo-1600267175161-cfaa711b4a81",
   },
+  {
+    title: "Security Operation Center (SOC)",
+    img: "/public/soc.jpeg",
+  },
+  {
+    title: "Red Team",
+    img: "/public/redteam.jpeg",
+  }
 ];
 
 const Categories = () => {
