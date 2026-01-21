@@ -1,8 +1,8 @@
-const TrendingQuestions = () => {
+]const TrendingQuestions = () => {
   return (
     <div
       className="
-        bg-[#020617] 
+        bg-black-900 
         border border-gray-800 
         rounded-xl 
         p-3 
@@ -12,7 +12,7 @@ const TrendingQuestions = () => {
         w-full
       "
     >
-      <h2 className="text-base sm:text-lg font-semibold text-gray-200 mb-3">
+      <h2 className="text-base sm:text-lg font-semibold text-black-900 mb-3">
         🔥 Trending Questions
       </h2>
 
