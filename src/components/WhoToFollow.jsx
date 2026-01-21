@@ -2,8 +2,8 @@ const WhoToFollow = () => {
   return (
     <div
       className="
-        bg-[#020617] 
-        border border-gray-800 
+        bg-black-900 
+        border border-green-700 
         rounded-xl 
         p-3 
         sm:p-4 
