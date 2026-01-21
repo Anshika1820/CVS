@@ -19,13 +19,16 @@ const Footer = () => {
   const [openPrivacy, setOpenPrivacy] = useState(false);
 
   return (
-    <footer className="relative bg-black-900 text-gray-300">
+    <footer className="relative text-gray-300 bg-black overflow-hidden">
 
-      {/* soft background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.06),transparent_45%)] pointer-events-none" />
+      {/* subtle green glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.07),transparent_50%)] pointer-events-none" />
+
+      {/* dark depth layer */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#020617] to-black pointer-events-none" />
 
       {/* top accent line */}
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-green-500 to-transparent" />
+      <div className="relative h-[2px] bg-gradient-to-r from-transparent via-green-500 to-transparent" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14">
 
@@ -52,10 +55,12 @@ const Footer = () => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#161b22] rounded-full flex items-center justify-center
-                             hover:bg-green-500 hover:scale-110 transition-all duration-300"
+                  className="w-10 h-10 bg-[#0b1220] border border-[#161b22]
+                             rounded-full flex items-center justify-center
+                             hover:bg-green-500 hover:border-green-500
+                             hover:scale-110 transition-all duration-300"
                 >
-                  <span className="text-gray-300 hover:text-white">
+                  <span className="text-gray-300 hover:text-black">
                     {item.icon}
                   </span>
                 </a>
@@ -118,7 +123,7 @@ const Footer = () => {
         {/* bottom bar */}
         <div className="mt-12 pt-6 border-t border-[#161b22]
                         flex flex-col sm:flex-row justify-between items-center
-                        text-sm text-gray-400 gap-3">
+                        text-sm text-gray-500 gap-3">
 
           <p>© {currentYear} CodevirusSecurity. All Rights Reserved.</p>
 
