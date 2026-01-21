@@ -19,7 +19,7 @@ const Footer = () => {
   const [openPrivacy, setOpenPrivacy] = useState(false);
 
   return (
-    <footer className="relative bg-gradient-to-br from-[#0d1117] via-[#0f172a] to-[#020617] text-gray-300">
+    <footer className="relative bg-black-900 text-gray-300">
 
       {/* soft background glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.06),transparent_45%)] pointer-events-none" />
