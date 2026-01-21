@@ -7,9 +7,9 @@ const contributors = [
     img: "https://i.pravatar.cc/150?img=12",
   },
   {
-    name: "Ankit Verma",
+    name: "Ankit Rai",
     role: "SOC Analyst",
-    img: "https://i.pravatar.cc/150?img=32",
+    img: "https://i.pravatar.cc/150?img=12",
   },
 ];
 
