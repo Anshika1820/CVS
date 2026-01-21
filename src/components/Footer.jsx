@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  HiLocationMarker,
-  HiMail,
-  HiPhone,
-} from "react-icons/hi";
+import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import {
   FaTwitter,
   FaInstagram,
@@ -19,13 +15,10 @@ const Footer = () => {
   const [openPrivacy, setOpenPrivacy] = useState(false);
 
   return (
-    <footer className="relative text-gray-300 bg-black overflow-hidden">
+    <footer className="relative bg-black text-gray-300 overflow-hidden">
 
-      {/* subtle green glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.07),transparent_50%)] pointer-events-none" />
-
-      {/* dark depth layer */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#020617] to-black pointer-events-none" />
+      {/* soft green glow (vercel safe) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-green-500/5 via-transparent to-transparent pointer-events-none" />
 
       {/* top accent line */}
       <div className="relative h-[2px] bg-gradient-to-r from-transparent via-green-500 to-transparent" />
@@ -33,7 +26,7 @@ const Footer = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14">
 
         {/* main content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center sm:text-left">
 
           {/* company info */}
           <div>
@@ -43,7 +36,7 @@ const Footer = () => {
               management strategies.
             </p>
 
-            <div className="flex space-x-4">
+            <div className="flex justify-center sm:justify-start space-x-4">
               {[
                 { icon: <FaTwitter />, link: "https://x.com/codevirussec" },
                 { icon: <FaInstagram />, link: "https://www.instagram.com/codevirussec" },
@@ -58,7 +51,7 @@ const Footer = () => {
                   className="w-10 h-10 bg-[#0b1220] border border-[#161b22]
                              rounded-full flex items-center justify-center
                              hover:bg-green-500 hover:border-green-500
-                             hover:scale-110 transition-all duration-300"
+                             transition-all duration-300"
                 >
                   <span className="text-gray-300 hover:text-black">
                     {item.icon}
@@ -75,17 +68,17 @@ const Footer = () => {
             </h3>
 
             <div className="space-y-4 text-sm">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
                 <HiLocationMarker className="text-green-500 text-xl" />
                 <span>Lucknow, India</span>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
                 <HiMail className="text-green-500 text-xl" />
                 <span>services@codevirussec.in</span>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
                 <HiPhone className="text-green-500 text-xl" />
                 <span>+91 9918103909</span>
               </div>
@@ -122,8 +115,9 @@ const Footer = () => {
 
         {/* bottom bar */}
         <div className="mt-12 pt-6 border-t border-[#161b22]
-                        flex flex-col sm:flex-row justify-between items-center
-                        text-sm text-gray-500 gap-3">
+                        flex flex-col sm:flex-row
+                        justify-between items-center
+                        text-sm text-gray-500 gap-3 text-center">
 
           <p>© {currentYear} CodevirusSecurity. All Rights Reserved.</p>
 
