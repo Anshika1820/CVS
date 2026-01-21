@@ -1,11 +1,10 @@
 const PopularTopics = () => {
   const topics = [
-    "EthicalHacking",
     "Cyber Attack",
-    "SQLInjection",
+    "Blue Team",
     "BigBounty",
-    "WebSecurity",
-    "NetworkSecurity",
+    "Red Team",
+    "SOC",
   ];
 
   return (
