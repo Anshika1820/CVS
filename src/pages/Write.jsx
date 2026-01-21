@@ -24,7 +24,7 @@ const Write = () => {
           <option>Bug Bounty</option>
           <option>Blue Team</option>
           <option>Red Team</option>
-          <option>Any latest technology/option>                 
+          <option>Any latest technology</option>
         </select>
 
         <textarea
@@ -33,11 +33,11 @@ const Write = () => {
           placeholder="Write your article here (800+ words preferred)"
         />
 
-        <button className="bg-green-500 text-black px-6 py-2 rounded ">
+        <button className="bg-green-500 text-black px-6 py-2 rounded">
           Submit for Review
         </button>
       </div>
-      </>
+    </>
   );
 };
 
