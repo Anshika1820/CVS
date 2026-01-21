@@ -1,4 +1,4 @@
-]const TrendingQuestions = () => {
+const TrendingQuestions = () => {
   return (
     <div
       className="
