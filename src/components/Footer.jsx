@@ -6,8 +6,8 @@ import {
   FaLinkedin,
   FaFacebookF,
 } from "react-icons/fa";
-import TnC from "../components/TnC";
-import Privacy from "../components/Privacy";
+import TnC from "../components/tnc";
+import Privacy from "../components/privacy";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
