@@ -66,7 +66,7 @@ const Home = () => {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-green-500 mt-6 md:mt-10">
+      <div className="border-t border-green-500">
         <Footer />
       </div>
     </>
