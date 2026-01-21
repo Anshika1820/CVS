@@ -109,25 +109,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 sm:mb-6 text-green-500">Services</h3>
-            <ul className="space-y-2 sm:space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-400 hover:text-green-500 transition-colors duration-300 text-sm sm:text-base"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-        </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-[#161b22] mt-10 pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
