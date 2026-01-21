@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import {
   HiLocationMarker,
   HiMail,
@@ -20,18 +19,20 @@ const Footer = () => {
   const [openPrivacy, setOpenPrivacy] = useState(false);
 
   return (
-    <footer className="relative text-gray-300 bg-gradient-to-br from-[#0d1117] via-[#0f172a] to-[#020617]">
+    <footer className="relative bg-gradient-to-br from-[#0d1117] via-[#0f172a] to-[#020617] text-gray-300">
 
-      {/* Soft glow background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.08),transparent_40%)] pointer-events-none" />
+      {/* soft background glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.06),transparent_45%)] pointer-events-none" />
 
-      {/* Top accent line */}
+      {/* top accent line */}
       <div className="h-[2px] bg-gradient-to-r from-transparent via-green-500 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14">
 
-          {/* Company Info */}
+        {/* main content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+          {/* company info */}
           <div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               We help organizations strengthen their security posture through
@@ -51,8 +52,8 @@ const Footer = () => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#161b22] rounded-full flex items-center justify-center 
-                             hover:bg-green-500 hover:scale-110 transition-all duration-300 shadow-md"
+                  className="w-10 h-10 bg-[#161b22] rounded-full flex items-center justify-center
+                             hover:bg-green-500 hover:scale-110 transition-all duration-300"
                 >
                   <span className="text-gray-300 hover:text-white">
                     {item.icon}
@@ -62,42 +63,31 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Location */}
+          {/* location */}
           <div>
             <h3 className="text-lg font-semibold mb-5 text-green-500">
               Location
             </h3>
 
             <div className="space-y-4 text-sm">
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Lucknow,India"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 hover:text-green-500 transition"
-              >
+              <div className="flex items-center gap-3">
                 <HiLocationMarker className="text-green-500 text-xl" />
                 <span>Lucknow, India</span>
-              </a>
+              </div>
 
-              <a
-                href="mailto:services@codevirussec.in"
-                className="flex items-center gap-3 hover:text-green-500 transition"
-              >
+              <div className="flex items-center gap-3">
                 <HiMail className="text-green-500 text-xl" />
                 <span>services@codevirussec.in</span>
-              </a>
+              </div>
 
-              <a
-                href="tel:+919918103909"
-                className="flex items-center gap-3 hover:text-green-500 transition"
-              >
+              <div className="flex items-center gap-3">
                 <HiPhone className="text-green-500 text-xl" />
                 <span>+91 9918103909</span>
-              </a>
+              </div>
             </div>
           </div>
 
-          {/* Useful Links */}
+          {/* useful links */}
           <div>
             <h3 className="text-lg font-semibold mb-5 text-green-500">
               Useful Links
@@ -123,32 +113,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Trust / Stats (Right Side Fix) */}
-          <div>
-            <h3 className="text-lg font-semibold mb-5 text-green-500">
-              Why Trust Us
-            </h3>
-
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li className="flex items-center gap-2">
-                <span className="text-green-500">✔</span> OWASP Aligned Security
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-green-500">✔</span> 100+ Security Audits
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-green-500">✔</span> Trusted by Startups
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-green-500">✔</span> Ethical Hacking Experts
-              </li>
-            </ul>
-          </div>
-
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-[#161b22] mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400 gap-3">
+        {/* bottom bar */}
+        <div className="mt-12 pt-6 border-t border-[#161b22]
+                        flex flex-col sm:flex-row justify-between items-center
+                        text-sm text-gray-400 gap-3">
+
           <p>© {currentYear} CodevirusSecurity. All Rights Reserved.</p>
 
           <div className="flex space-x-5">
@@ -166,6 +137,7 @@ const Footer = () => {
             </span>
           </div>
         </div>
+
       </div>
 
       <TnC open={openTerms} onClose={() => setOpenTerms(false)} />
